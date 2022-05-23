@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyFuel</string>
+    <string name="cars">Moje samochody</string>
+    <string name="fuel_type">Typ paliwa</string>
+    <string name="hello">Witaj w aplikacji MyFuel!</string>
+    <string name="nav_cars">Moje samochody</string>
+    <string name="nav_tanks">Tankowania</string>
+    <string name="nav_stats">Statystyki</string>
+    <string name="album">30166</string>
+    <string name="nav_open_hamburger">Otwórz menu</string>
+    <string name="nav_close_hamburger">Zamknij menu</string>
+</resources>

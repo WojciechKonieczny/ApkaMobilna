@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">apkamobilna30166</string>
+    <string name="app_name">MyFuel</string>
+    <string name="cars">My cars</string>
+    <string name="fuel_type">Fuel type</string>
+    <string name="hello">Hello in MyFuel application!</string>
+    <string name="nav_cars">My Cars</string>
+    <string name="nav_tanks">Fuels</string>
+    <string name="nav_stats">Stats</string>
+    <string name="album">30166</string>
+    <string name="nav_open_hamburger">Open menu</string>
+    <string name="nav_close_hamburger">Close menu</string>
 </resources>

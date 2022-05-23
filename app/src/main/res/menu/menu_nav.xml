@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    // elementy w szufladzie nawigacyjnej (Hamburger Menu)
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_cars"
+            android:checked="true"
+            android:icon="@drawable/ic_car"
+            android:title="@string/nav_cars"/>
+        <item
+            android:id="@+id/item_tanks"
+            android:checked="true"
+            android:icon="@drawable/ic_tank"
+            android:title="@string/nav_tanks" />
+
+        <item
+            android:id="@+id/item_stats"
+            android:checked="true"
+            android:icon="@drawable/ic_stats"
+            android:title="@string/nav_stats" />
+    </group>
+</menu>
