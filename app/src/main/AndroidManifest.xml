@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+        <activity
+            android:name=".Cars.MyCarsAktualizacja"
+            android:exported="false" />
+        <activity
+            android:name=".Cars.MyCars"
+            android:label="@string/nav_cars"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/MyAppTheme" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

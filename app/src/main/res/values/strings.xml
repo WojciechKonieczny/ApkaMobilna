@@ -9,4 +9,18 @@
     <string name="album">30166</string>
     <string name="nav_open_hamburger">Open menu</string>
     <string name="nav_close_hamburger">Close menu</string>
+    <string name="title_activity_my_cars">MyCars</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="input_marka">Mark</string>
+    <string name="input_model">Model</string>
+    <string name="input_year">Year</string>
+    <string name="input_engine">Engine power</string>
+    <string name="input_fuel">Fuel type</string>
 </resources>

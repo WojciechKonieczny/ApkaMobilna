@@ -10,4 +10,9 @@
     <string name="album">30166</string>
     <string name="nav_open_hamburger">Otwórz menu</string>
     <string name="nav_close_hamburger">Zamknij menu</string>
+    <string name="input_marka">Marka</string>
+    <string name="input_model">Model</string>
+    <string name="input_year">Rok</string>
+    <string name="input_engine">Moc silnika</string>
+    <string name="input_fuel">Typ paliwa</string>
 </resources>

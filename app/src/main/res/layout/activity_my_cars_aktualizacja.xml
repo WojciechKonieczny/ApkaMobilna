@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cars.MyCarsAktualizacja"
+    android:orientation="vertical">
+
+    ContentValues obiektValues = new ContentValues();
+    obiektValues.put( "MARKA", marka );
+    obiektValues.put( "MODEL", model );
+    obiektValues.put( "ROK", rok );
+    obiektValues.put( "MOC SILNIKA", moc);
+    obiektValues.put( "PALIWO", paliwo );
+
+    <EditText
+        android:id="@+id/inputMarkaAktualizacja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_marka"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/inputModelAktualizacja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_model"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/inputRokAktualizacja"
+        android:inputType="numberSigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_year"
+        android:autofillHints=""
+        />
+
+    <EditText
+        android:id="@+id/inputMocAktualizacja"
+        android:inputType="numberSigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_engine"
+        android:autofillHints=""
+        />
+
+    <EditText
+        android:id="@+id/inputPaliwoAktualizacja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_fuel"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonAktualizuj"
+        android:text="Aktualizuj dane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonUsun"
+        android:text="Usuń rekord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
