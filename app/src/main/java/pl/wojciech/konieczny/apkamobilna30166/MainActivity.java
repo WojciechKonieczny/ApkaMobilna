@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import pl.wojciech.konieczny.apkamobilna30166.MyCars.MyCars;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -60,7 +63,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch( id ) {
             case R.id.item_cars:
                 Toast.makeText(this, "My cars", Toast.LENGTH_LONG).show();
-                break;
+
+                Intent intent = new Intent(this, MyCars.class);
+                startActivity(intent);
+
+                return true;
         }
 
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);

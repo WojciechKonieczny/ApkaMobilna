@@ -11,6 +11,19 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
+            android:name=".MyCars.MyCarsNew"
+            android:exported="false"
+            android:parentActivityName=".MyCars.MyCars"
+            android:label="@string/nav_cars_add"
+            android:theme="@style/MyAppTheme"/>
+
+        <activity
+            android:name=".MyCars.MyCars"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/nav_cars"
+            android:theme="@style/MyAppTheme"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
