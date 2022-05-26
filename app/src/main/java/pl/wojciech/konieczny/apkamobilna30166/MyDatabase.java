@@ -13,9 +13,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import pl.wojciech.konieczny.apkamobilna30166.MyCars.MyCarsDao;
 import pl.wojciech.konieczny.apkamobilna30166.MyCars.MyCarsModal;
+import pl.wojciech.konieczny.apkamobilna30166.MyTanks.MyTanksDao;
+import pl.wojciech.konieczny.apkamobilna30166.MyTanks.MyTanksModal;
 
 // adding annotation for our database entities and db version.
-@androidx.room.Database(entities = {MyCarsModal.class}, version = 1)
+@androidx.room.Database(entities = {MyCarsModal.class, MyTanksModal.class}, version = 7)
 public abstract class MyDatabase extends RoomDatabase {
 
     // instance of our database class
@@ -23,6 +25,7 @@ public abstract class MyDatabase extends RoomDatabase {
 
     // abstract variable for Dao
     public abstract MyCarsDao Dao();
+    public abstract MyTanksDao Dao2();
 
     // on below line we are getting instance for our database.
     public static synchronized MyDatabase getInstance(Context context) {
@@ -59,6 +62,7 @@ public abstract class MyDatabase extends RoomDatabase {
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
         PopulateDbAsyncTask(MyDatabase instance) {
             Dao dao = (Dao) instance.Dao();
+            Dao dao2 = (Dao) instance.Dao2();
         }
         @Override
         protected Void doInBackground(Void... voids) {

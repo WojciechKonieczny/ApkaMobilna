@@ -10,4 +10,5 @@
     <string name="nav_open_hamburger">Open menu</string>
     <string name="nav_close_hamburger">Close menu</string>
     <string name="nav_cars_add">Add car</string>
+    <string name="nav_tanks_add">Add refueling</string>
 </resources>

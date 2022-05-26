@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 import pl.wojciech.konieczny.apkamobilna30166.MyCars.MyCars;
+import pl.wojciech.konieczny.apkamobilna30166.MyTanks.MyTanks;
+import pl.wojciech.konieczny.apkamobilna30166.MyTanks.MyTanksNew;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -62,10 +64,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch( id ) {
             case R.id.item_cars:
-                Toast.makeText(this, "My cars", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.nav_cars, Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(this, MyCars.class);
                 startActivity(intent);
+
+                return true;
+            case R.id.item_tanks:
+                Toast.makeText(this, R.string.nav_tanks, Toast.LENGTH_LONG).show();
+
+                Intent intentTank = new Intent(this, MyTanks.class);
+                startActivity(intentTank);
 
                 return true;
         }

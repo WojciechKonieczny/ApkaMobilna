@@ -11,4 +11,5 @@
     <string name="nav_open_hamburger">Otwórz menu</string>
     <string name="nav_close_hamburger">Zamknij menu</string>
     <string name="nav_cars_add">Dodaj auto</string>
+    <string name="nav_tanks_add">Dodaj tankowanie</string>
 </resources>
