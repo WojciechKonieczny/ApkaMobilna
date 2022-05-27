@@ -11,4 +11,15 @@
     <string name="nav_close_hamburger">Close menu</string>
     <string name="nav_cars_add">Add car</string>
     <string name="nav_tanks_add">Add refueling</string>
+
+    <string-array name="stations">
+        <item>Orlen</item>
+        <item>Lotos</item>
+        <item>BP</item>
+        <item>CircleK</item>
+        <item>Intermarche</item>
+        <item>Amic</item>
+        <item>Moya</item>
+        <item>Other</item>
+    </string-array>
 </resources>

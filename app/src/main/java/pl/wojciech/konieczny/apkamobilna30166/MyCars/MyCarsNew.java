@@ -61,9 +61,11 @@ public class MyCarsNew extends AppCompatActivity {
                 if (mark.isEmpty() || model.isEmpty() || fuel.isEmpty() || year.isEmpty() || engine.isEmpty()) {
                     Toast.makeText(MyCarsNew.this, "Please enter the valid cars details.", Toast.LENGTH_SHORT).show();
                     return;
+                } else {
+                    // calling a method to save our course.
+                    saveCar(mark, model, fuel, year, engine);
+                    finish();
                 }
-                // calling a method to save our course.
-                saveCar(mark, model, fuel, year, engine);
             }
         });
     }

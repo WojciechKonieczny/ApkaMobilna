@@ -2,18 +2,22 @@ package pl.wojciech.konieczny.apkamobilna30166.MyTanks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import pl.wojciech.konieczny.apkamobilna30166.MyCars.MyCarsNew;
 import pl.wojciech.konieczny.apkamobilna30166.R;
 
-public class MyTanksNew extends AppCompatActivity {
+public class MyTanksNew extends AppCompatActivity implements View.OnClickListener {
     private EditText textViewAddDate, textViewAddMileage, textViewAddCostLiter, textViewAddCostSum, textViewAddStation;
     private Button buttonAddTank;
 
@@ -64,13 +68,22 @@ public class MyTanksNew extends AppCompatActivity {
                     Toast.makeText(MyTanksNew.this, "Please enter the valid tank details.", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
-                    // calling a method to save our course.
-                    float litersFuel = Float.parseFloat(costSum) / Float.parseFloat(costPerLiter);
-                    Log.d("WK", String.valueOf(litersFuel));
-                    saveTank(date, mileage, litersFuel, costPerLiter, costSum, gasStation);
+
+                    if( Float.parseFloat(costPerLiter) > Float.parseFloat(costSum) ) {
+                        Toast.makeText(MyTanksNew.this, "Cost per liter cannot be greater than sum cost", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        float litersFuel = Float.parseFloat(costSum) / Float.parseFloat(costPerLiter);
+                        Log.d("WK", String.valueOf(litersFuel));
+                        saveTank(date, mileage, litersFuel, costPerLiter, costSum, gasStation);
+
+                        finish();
+                    }
                 }
             }
         });
+
+        textViewAddDate.setOnClickListener(this);
     }
 
     private void saveTank(String date, String mileage, float litersFuel, String costPerLiter, String costSum, String gasStation) {
@@ -97,5 +110,28 @@ public class MyTanksNew extends AppCompatActivity {
         // displaying a toast message after adding the data
         Toast.makeText(this, "Tank has been saved to Database. ", Toast.LENGTH_SHORT).show();
 //        finish();
+    }
+
+    public void onClick(View v) {
+        if (v == textViewAddDate) {
+            final Calendar calendar = Calendar.getInstance ();
+            int mYear = calendar.get ( Calendar.YEAR );
+            int mMonth = calendar.get ( Calendar.MONTH );
+            int mDay = calendar.get ( Calendar.DAY_OF_MONTH );
+
+            //show dialog
+            DatePickerDialog datePickerDialog = new DatePickerDialog ( this, new DatePickerDialog.OnDateSetListener () {
+                @Override
+                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    textViewAddDate.setText ( dayOfMonth + "/" + (month + 1) + "/" + year );
+                }
+            }, mYear, mMonth, mDay );
+            datePickerDialog.show ();
+        }
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }
