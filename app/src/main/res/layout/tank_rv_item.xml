@@ -10,7 +10,6 @@
     app:cardBackgroundColor="#FFFFFF"
     app:contentPadding="2dp">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -109,7 +108,7 @@
             android:inputType="numberDecimal"
             android:padding="8dp"
             android:text="Total cost"
-            android:textColor="@color/black"
+            android:textColor="@color/red"
             android:textSize="15sp" />
 
         <TextView
@@ -133,12 +132,12 @@
             android:id="@+id/textView_tank_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/textView_tank_cost_sum"
+            android:layout_centerInParent="true"
+            android:gravity="center"
             android:padding="8dp"
             android:text="Gas station"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-            android:layout_below="@id/textView_tank_cost_sum"
             android:textSize="15sp" />
 
         <TextView
@@ -152,8 +151,6 @@
 
 
     </RelativeLayout>
-
-
 
 
 </androidx.cardview.widget.CardView>

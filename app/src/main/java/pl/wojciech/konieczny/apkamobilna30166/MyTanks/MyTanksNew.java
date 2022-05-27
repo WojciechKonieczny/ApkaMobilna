@@ -63,7 +63,6 @@ public class MyTanksNew extends AppCompatActivity implements View.OnClickListene
                 String costSum = textViewAddCostSum.getText().toString();
                 String gasStation = textViewAddStation.getText().toString();
 
-
                 if (date.isEmpty() || mileage.isEmpty() || costPerLiter.isEmpty() || costSum.isEmpty() || gasStation.isEmpty()) {
                     Toast.makeText(MyTanksNew.this, "Please enter the valid tank details.", Toast.LENGTH_SHORT).show();
                     return;

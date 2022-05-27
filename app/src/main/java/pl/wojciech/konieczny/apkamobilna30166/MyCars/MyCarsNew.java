@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 import pl.wojciech.konieczny.apkamobilna30166.R;
 
 public class MyCarsNew extends AppCompatActivity {
@@ -58,7 +60,8 @@ public class MyCarsNew extends AppCompatActivity {
                 String year = textViewAddYear.getText().toString();
                 String engine = textViewAddEngine.getText().toString();
 
-                if (mark.isEmpty() || model.isEmpty() || fuel.isEmpty() || year.isEmpty() || engine.isEmpty()) {
+                if (mark.isEmpty() || model.isEmpty() || fuel.isEmpty() || year.isEmpty() || engine.isEmpty() || Integer.parseInt(year.toString()) <= 0
+                        || Calendar.getInstance().get(Calendar.YEAR) < Integer.parseInt(year.toString()) || Integer.parseInt(engine.toString()) <= 0 ) {
                     Toast.makeText(MyCarsNew.this, "Please enter the valid cars details.", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
